@@ -7,8 +7,8 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "lexivo",
-    "version": "0.0.0"
+    "productName": "Lexivo",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -23,13 +23,9 @@
       },
       "externalBin": [],
       "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
+        "icons/Favicon.png"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "lexivo.net",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -58,7 +54,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "lexivo",
+        "title": "Lexivo",
         "width": 800
       }
     ]
