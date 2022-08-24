@@ -23,7 +23,8 @@
       },
       "externalBin": [],
       "icon": [
-        "../src/images/Favicon.png"
+        "icons/Favicon.png",
+        "icons/Favicon.ico"
       ],
       "identifier": "lexivo.net",
       "longDescription": "",
@@ -54,8 +55,8 @@
         "label": "Lexivo",
         "title": "Lexivo",
         "center": true,
-        "width": 1100,
-        "minWidth": 450,
+        "width": 1300,
+        "minWidth": 1300,
         "height": 700,
         "minHeight": 700,
         "fullscreen": false,
