@@ -6,6 +6,9 @@
 npx create-tauri-app
 ```
 
+Также для первого запуска может потребуется установить [Rust](https://www.rust-lang.org/) и другие программы.
+Подробная инструкция [тут](https://tauri.app/v1/guides/getting-started/prerequisites)
+
 2 - Установка всех пакетов и зависимостей
 ```
 npm install
