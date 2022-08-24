@@ -1,7 +1,22 @@
-# Tauri + Vanilla
+# Lexivo - Tauri
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+1 - Для создания приложения на основе Tauri
 
-## Recommended IDE Setup
+```
+npx create-tauri-app
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+2 - Установка всех пакетов и зависимостей
+```
+npm install
+```
+
+3 - Запуск приложения в режиме разработчика
+```
+npm run tauri dev
+```
+
+4 - Сборка пакета
+```
+npm run tauri build
+```
