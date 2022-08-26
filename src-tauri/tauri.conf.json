@@ -1,7 +1,7 @@
 {
   "package": {
     "productName": "Lexivo",
-    "version": "0.0.1"
+    "version": "../package.json"
   },
   "build": {
     "devPath": "../src",
@@ -10,15 +10,7 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true,
-      "notification": {
-        "all": true
-      },
-      "dialog": {
-        "all": true,
-        "open": true,
-        "save": true
-      }
+      "all": true
     },
     "bundle": {
       "active": true,
@@ -54,7 +46,11 @@
       "csp": null
     },
     "updater": {
-      "active": false
+      "active": true,
+      "endpoints": [
+        "https://fm.paodingai.com/api/public/dl/5EmSELl2"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDM4Mzc4Q0IwREM3QjhGNEMKUldSTWozdmNzSXczT0s5bWZWL2Zjb29tZC81bmxVeUdYM2dNZ3RxeklhT0lsYVZFMUE3MWRkQlYK"
     },
     "windows": [
       {
@@ -66,7 +62,8 @@
         "height": 700,
         "minHeight": 700,
         "fullscreen": false,
-        "resizable": true
+        "resizable": true,
+        "focus": true
       }
     ]
   }
