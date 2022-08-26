@@ -14,12 +14,17 @@ npx create-tauri-app
 npm install
 ```
 
-3 - Запуск приложения в режиме разработчика
+3 - Создать .env файл
+```
+copy example.env .env
+```
+
+4 - Запуск приложения в режиме разработчика
 ```
 npm run tauri dev
 ```
 
-4 - Сборка пакета
+5 - Сборка пакета
 ```
 npm run tauri build
 ```
