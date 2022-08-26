@@ -1,20 +1,23 @@
 {
-  "build": {
-    "beforeDevCommand": "",
-    "beforeBuildCommand": "",
-    "devPath": "../src",
-    "distDir": "../src",
-    "withGlobalTauri": true
-  },
   "package": {
     "productName": "Lexivo",
     "version": "0.0.1"
+  },
+  "build": {
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
   },
   "tauri": {
     "allowlist": {
       "all": true,
       "notification": {
         "all": true
+      },
+      "dialog": {
+        "all": true,
+        "open": true,
+        "save": true
       }
     },
     "bundle": {
