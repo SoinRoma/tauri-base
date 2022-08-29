@@ -47,10 +47,8 @@
     },
     "updater": {
       "active": true,
-      "endpoints": [
-        "https://lexivo.uzdevelop.ru/static/update.json"
-      ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDM4Mzc4Q0IwREM3QjhGNEMKUldSTWozdmNzSXczT0s5bWZWL2Zjb29tZC81bmxVeUdYM2dNZ3RxeklhT0lsYVZFMUE3MWRkQlYK"
+      "endpoints": ["https://lexivo.uzdevelop.ru/static/update.json"],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDhGRDEzNERCRkY0MTVGQTAKUldTZ1gwSC8yelRSanlackhOLzZ6dDhtcWU1ZkEyQ2JsTUtHak9XcGF3WXA5MGFzOUpPVi9QekIK"
     },
     "windows": [
       {
