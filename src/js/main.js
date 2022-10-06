@@ -1,3 +1,5 @@
+//require('dotenv');
+
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
@@ -31,9 +33,11 @@ btn3.addEventListener('click', () => {
 
 
     const update = window.__TAURI__.updater.checkUpdate();
-
-    // window.__TAURI__.process.relaunch();
-
+    if (update.shouldUpdate) {
+        console.log(`Installing update ${update.manifest?.version}, ${update.manifest?.date}, ${update.manifest.body}`);
+        window.__TAURI__.updater.installUpdate();
+        //window.__TAURI__.process.relaunch();
+    }
 
 })
 
