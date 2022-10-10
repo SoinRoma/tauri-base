@@ -26,12 +26,14 @@ tauri signer generate -w ~/.tauri/myapp.key
 
 + Публичный ключ должен находить в tauri.conf.json\tauri\updater\pubkey
 + Приватный ключ (с паролём или без) должен лижать в переменных средах вашего компьютера
-Подробнее об этом [тут](https://github.com/tauri-apps/tauri/discussions/4451). А как правильно добавить ключ в 
-переменные среды [тут](https://phoenixnap.com/kb/windows-set-environment-variable). После этого потребуется перезапуск 
+Подробнее об этой [проблеме](https://github.com/tauri-apps/tauri/discussions/4451). А как правильно добавить ключ в 
+[переменные среды](https://phoenixnap.com/kb/windows-set-environment-variable). После этого потребуется перезапуск 
 компьютера.
   
+Также его нужно будет заменить в файле main.yml
+  
 
-Полная инструкция здесь [тут](https://tauri.app/v1/guides/distribution/updater/)
+Полная инструкция [здесь](https://tauri.app/v1/guides/distribution/updater/)
 
 
 ## Запуск приложения
