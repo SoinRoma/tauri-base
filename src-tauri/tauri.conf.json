@@ -47,8 +47,8 @@
     },
     "updater": {
       "active": true,
-      "endpoints": ["https://0ca1-84-54-66-181.eu.ngrok.io/update/{{current_version}}/"],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDdDRDcwNzM5RDE1MEZGQUYKUldTdi8xRFJPUWZYZkV3QmxMcURzcC92cDdzUHJiMG5meXZFK1pEVDFHOHJxbU1adjB5akkrZEUK"
+      "endpoints": ["https://github.com/SoinRoma/lexivo-tauri/releases/latest/download/update.json"],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDZEQjAyODZCMjg4NkZEMDEKUldRQi9ZWW9heWl3YlhmMCtDTnNicVJxbkt5dGJqcWpXd2FGUWhFNXhVazBoWWVxdjIyV2VjOHoK"
     },
     "windows": [
       {
