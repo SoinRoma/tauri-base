@@ -1,0 +1,68 @@
+.account-page {
+    background-color: #fff;
+    padding-left: 0;
+}
+
+.account-page .content {
+    padding: 0;
+    width: 100%;
+}
+
+.account-content {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.account-content .form-group label {
+    font-weight: 600;
+    color: #464646;
+}
+
+.account-content .form-group .group_formcontrol {
+    background: #FFFFFF;
+    border: 1px solid #EDE2FF;
+    border-radius: 2px;
+}
+
+.account-content .form-group .newgroup_create {
+    border-radius: 2px;
+}
+
+.login-left {
+    float: left;
+    width: 40%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.login-right {
+    float: left;
+    background-color: #004462;
+    background-image: url(/static/v2/images/login-email.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+    height: 100vh;
+}
+
+.login-text-details {
+    padding-bottom: 25px;
+}
+
+.login-text-details h3 {
+    font-size: 20px;
+    color: #004462;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.login-text-details p {
+    color: #000;
+    line-height: 1.5;
+}

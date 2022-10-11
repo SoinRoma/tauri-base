@@ -4,25 +4,178 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lexivo</title>
-
     <link rel="icon" type="image/png" href="./images/Favicon.png" />
-    <link rel="stylesheet" href="css/style.css"/>
+
+    <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./plugins/filepond/filepond-plugin-image-preview.css">
+    <link rel="stylesheet" href="./plugins/filepond/filepond.css">
+    <link rel="stylesheet" href="./plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="./plugins/shepherd/introjs.min.css">
+    <link rel="stylesheet" href="./css/base/style.css"/>
+    <link rel="stylesheet" href="./css/app.css"/>
+
+    <script src="./plugins/jquery/jquery.js"></script>
+    <script src="./plugins/bootstrap/popper.min.js"></script>
+    <script src="./plugins/bootstrap/bootstrap.js"></script>
+    <script src="./plugins/filepond/filepond-plugin-image-preview.js"></script>
+    <script src="./plugins/filepond/filepond-plugin-file-encode.js"></script>
+    <script src="./plugins/filepond/filepond-plugin-file-validate-size.js"></script>
+    <script src="./plugins/filepond/filepond-plugin-file-validate-type.js"></script>
+    <script src="./plugins/filepond/filepond-plugin-image-exif-orientation.js"></script>
+    <script src="./plugins/filepond/filepond.js"></script>
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/toastr/toastr.min.js"></script>
+    <script src="./plugins/mask/input.mask.js"></script>
+    <script src="./plugins/timer/timer.min.js"></script>
+    <script src="./plugins/shepherd/intro.min.js"></script>
+
 </head>
 
 <body>
 
-<button id="btn1">Get Notification</button>
-<button id="btn2">Get Dialog</button>
-<button id="btn3">Check Update</button>
-<button id="btn4">Logout</button>
-
 <ul id="chatContactList"></ul>
-<h1>Old Version</h1>
-<!--<h1>New Version</h1>-->
 
-<script src="./plugins/jquery/jquery.js"></script>
-<script type="module" src="./js/main.js"></script>
+<div class="phone">
+    <form id="call-controls">
+        <div class="phone-header">
+            <div class="phone-input">
+                <input type="text" name="phone" id="phone-number" class="phone-number"
+                       placeholder="Type number">
+            </div>
+        </div>
+        <div class="phone-main">
+            <div class="d-flex align-items-center justify-content-between mb-3 block_from_phone">
+                <span>From:</span>
+                <select id="from_phone" class="form-control select_phone">
+                    <option value="19127159855" selected>19127159855</option>
+                </select>
+            </div>
+
+            <div class="phone-keyboard">
+                <a href="#" class="keyboard-item keyboard-number" data-key="1">1</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="2">2</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="3">3</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="4">4</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="5">5</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="6">6</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="7">7</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="8">8</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="9">9</a>
+
+                <a href="#" class="keyboard-item keyboard-number" data-key="+">+</a>
+                <a href="#" class="keyboard-item keyboard-number" data-key="0">0</a>
+                <a href="#" class="keyboard-item keyboard-item__backspace" data-key="backspace"><</a>
+            </div>
+            <div class="phone-controls">
+                <button id="button-call" type="submit" class="keyboard-item keyboard-item__phone"
+                        data-key="phone">
+                    <img src="./images/icons/phone.svg" alt="phone">
+                </button>
+            </div>
+        </div>
+        <div class="phone-footer">
+            <div class="settings-control full-options">
+                <ul>
+                    <li class="d-flex align-items-center">
+                        <label class="switch mr-3">
+                            <input id="avaible" type="checkbox" checked data-avaible="active">
+                            <label for="avaible"></label>
+                        </label>
+                        <div>
+                            <span>Is Available</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <div id="forwardBlock" class="hide  d-flex justify-content-between flex-column">
+        <form id="forwardForm" class="forward-h">
+            <ul class=" dispatcher-list dispatcher-main mt-4" id="disList">
+                <li class="contactBtn2 user-list-item userList">
+                    <h5 class="forward-title" id="contactName"></h5>
+                    <button type="submit" class="forward-btn" title="Accept">
+                        <img class="incoming-smallicon"
+                             src="./images/icons/phone.svg" alt="">
+                    </button>
+                </li>
+            </ul>
+        </form>
+        <button class="forward-back" title="Accept">< Back</button>
+    </div>
+    <h1 id="contactNameInProgressCallDisplay" class="hide"></h1>
+    <h4 id="timerOutgoing" class="timer-incomming hide"></h4>
+    <div id="volume-indicators" class="hide">
+        <div id="input-volume"></div>
+    </div>
+    <div class="active_call_buttons">
+        <form action="#sendDigit" id="sendDigit" class="hide mb-4">
+            <div class="d-flex align-items-center sendFormBlock">
+                <input type="number" class="form-controll-sendDigit" id="numberSendDigit"
+                       placeholder="Type number" autocomplete="off">
+                <button type="submit" class=" keyboard-item__phone button-sendDigit">
+                    <img src="./images/icons/phone.svg" alt="phone" class="sendFormImg">
+                </button>
+            </div>
+        </form>
+        <div class="d-flex justify-content-center align-items-center">
+            <button id="button-forward" class="keyboard-smalitem keyboard-item__forward hide">
+                <img class="incoming-smallicon"
+                     src="./images/icons/forward-call.svg" alt="">
+            </button>
+
+            <button id="button-hangup" class="keyboard-item keyboard-item__hangup hide">
+                <img src="./images/icons/phone.svg" alt="">
+            </button>
+
+            <button id="button-mute" class="keyboard-smalitem keyboard-item__mute hide">
+                <img class="incoming-smallicon" src="./images/icons/mute.svg"
+                     alt="mute">
+            </button>
+        </div>
+    </div>
+    <div id="incoming-call" class="hide">
+        <h2 class="incoming-main-call" id="incoming-number"></h2>
+        <h2 class="incoming-text-call" id="incoming-from-ivr"></h2>
+        <h4 id="timerIncoming" class="timer-incomming hide"></h4>
+        <div id="volume-indicators-incoming" class="hide">
+            <div id="input-volume-incoming"></div>
+        </div>
+        <div class="phone-controls justify-content-around align-items-center mt-4">
+            <button id="button-accept-incoming" class="keyboard-item keyboard-item__phone"
+                    title="Accept">
+                <img src="./images/icons/phone.svg" alt="">
+            </button>
+            <button id="button-reject-incoming" class="keyboard-item keyboard-item__hangup"
+                    title="Reject">
+                <img src="./images/icons/phone.svg" alt="">
+            </button>
+
+            <button id="button-forward-incoming" class="keyboard-smalitem keyboard-item__forward hide"
+                    title="Forward">
+                <img class="incoming-smallicon"
+                     src="./images/icons/forward-call.svg" alt="">
+            </button>
+            <button id="button-hangup-incoming" class="keyboard-item keyboard-item__hangup hide"
+                    title="Hangup">
+                <img src="./images/icons/phone.svg" alt="">
+            </button>
+            <button id="button-mute-incoming" class="keyboard-smalitem keyboard-item__mute hide"
+                    title="Mute">
+                <img class="incoming-smallicon" src="./images/icons/mute.svg"
+                     alt="">
+            </button>
+        </div>
+    </div>
+    <br/>
+</div>
+
 <script src="./js/check_auth.js" ></script>
-<script src="./js/chat/contacts_list_chat.js" ></script>
+<script src="./js/base/get_token.js"></script>
+<script src="./plugins/twilio/twilio.js"></script>
+<script src="./js/phone/call_phone.js" ></script>
+<script src="./js/phone/keyup_phone.js" ></script>
+<!--<script src="./js/chat/contacts_list_chat.js" ></script>-->
 </body>
 </html>

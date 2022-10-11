@@ -59,7 +59,6 @@ $.ajax({
       for (item of data.results) {
          linkChat(item, true);
       }
-      console.log(data);
    },
    error: () => {
       check_auth();
