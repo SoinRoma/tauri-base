@@ -13,6 +13,7 @@ fn main() {
     .on_system_tray_event(|app, event| match event {
           SystemTrayEvent::LeftClick {position: _,size: _,..} => {
             let window = app.get_window("main").unwrap();
+            window.show().unwrap();
             window.set_focus().unwrap();
             window.unminimize().unwrap();
           }

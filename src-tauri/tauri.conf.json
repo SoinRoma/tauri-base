@@ -62,7 +62,8 @@
         "resizable": true,
         "focus": true,
         "maximized": true,
-        "transparent": true
+        "transparent": true,
+        "decorations": false
       }
     ],
     "systemTray": {
