@@ -52,7 +52,6 @@
     },
     "windows": [
       {
-        "label": "Lexivo",
         "title": "Lexivo",
         "center": true,
         "width": 1300,
@@ -61,8 +60,14 @@
         "minHeight": 700,
         "fullscreen": false,
         "resizable": true,
-        "focus": true
+        "focus": true,
+        "maximized": true,
+        "transparent": true
       }
-    ]
+    ],
+    "systemTray": {
+      "iconPath": "icons/Favicon.ico",
+      "iconAsTemplate": true
+    }
   }
 }
