@@ -14,7 +14,6 @@ fn main() {
           SystemTrayEvent::LeftClick {position: _,size: _,..} => {
             let window = app.get_window("main").unwrap();
             window.set_focus().unwrap();
-            window.hide().unwrap();
             window.unminimize().unwrap();
           }
           SystemTrayEvent::RightClick {
