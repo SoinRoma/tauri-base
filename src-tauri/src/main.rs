@@ -13,19 +13,9 @@ fn main() {
     .on_system_tray_event(|app, event| match event {
           SystemTrayEvent::LeftClick {position: _,size: _,..} => {
             let window = app.get_window("main").unwrap();
-            if window.is_visible().unwrap() {
-                //window.show().unwrap();
-                //window.set_focus().unwrap();
-                //.unmaximize().unwrap();
-                               // window.maximize().unwrap();
-                               println!("yes");
-            } else {
-             //  window.show().unwrap();
-            //  window.set_focus().unwrap();
-               // window.unmaximize().unwrap();
-              //  window.maximize().unwrap();
-              println!("no");
-            }
+            window.set_focus().unwrap();
+            window.hide().unwrap();
+            window.unminimize().unwrap();
           }
           SystemTrayEvent::RightClick {
             position: _,
