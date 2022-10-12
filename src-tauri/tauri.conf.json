@@ -39,7 +39,10 @@
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "wix":{
+          "template":"wixFragments/template.wxs"
+        }
       }
     },
     "security": {
