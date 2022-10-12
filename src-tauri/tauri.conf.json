@@ -40,8 +40,9 @@
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": "",
-        "wix":{
-          "template":"wixFragments/template.wxs"
+        "wix": {
+          "template":"wixFragments/template.wxs",
+          "language": "en-US"
         }
       }
     },
