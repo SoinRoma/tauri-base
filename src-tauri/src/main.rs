@@ -3,17 +3,22 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::{SystemTray, SystemTrayMenu, SystemTrayEvent, Manager};
+use tauri::{CustomMenuItem, SystemTray, SystemTrayMenu, SystemTrayMenuItem, SystemTrayEvent, Manager};
 
 fn main() {
-  let tray_menu = SystemTrayMenu::new();
+  let quit = CustomMenuItem::new("quit".to_string(), "Exit");
+  let hide = CustomMenuItem::new("hide".to_string(), "Hide");
+  let tray_menu = SystemTrayMenu::new()
+    .add_item(quit)
+    .add_native_item(SystemTrayMenuItem::Separator)
+    .add_item(hide);
   let system_tray = SystemTray::new().with_menu(tray_menu);
   tauri::Builder::default()
     .system_tray(system_tray)
     .on_system_tray_event(|app, event| match event {
           SystemTrayEvent::LeftClick {position: _,size: _,..} => {
             let window = app.get_window("main").unwrap();
-            if (window.is_visible().unwrap()){
+            if window.is_visible().unwrap() {
                 window.set_focus().unwrap();
                 window.unminimize().unwrap();
             } else{
@@ -22,11 +27,7 @@ fn main() {
                 window.show().unwrap();
             }
           }
-          SystemTrayEvent::RightClick {
-            position: _,
-            size: _,
-            ..
-          } => {
+          SystemTrayEvent::RightClick {position: _,size: _,..} => {
             println!("system tray received a right click");
           }
           SystemTrayEvent::MenuItemClick { id, .. } => {
