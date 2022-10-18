@@ -41,8 +41,8 @@
         "digestAlgorithm": "sha256",
         "timestampUrl": "",
         "wix": {
-          "template":"wixFragments/template.wxs",
-          "language": "en-US"
+          "fragmentPaths": ["./wixFragments/registry.wxs"],
+          "componentRefs": ["ApplicationURI"]
         }
       }
     },
