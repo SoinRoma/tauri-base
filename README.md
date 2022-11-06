@@ -1,12 +1,4 @@
-<h1 align="center">Lexivo - Tauri</h1>
-
-### Новый проект
-
-Для создания приложения на основе Tauri используется команда:
-
-```
-npx create-tauri-app
-```
+<h1 align="center">Tauri-Base</h1>
 
 ### Дополнительные программы
 
@@ -22,15 +14,15 @@ tauri signer generate -w ~/.tauri/myapp.key
 ```
 
 В корне проекта появится папка ~ , где будут лежать ключи. 
-Образец находится в файле example.env
+Образец находится в файле `example-keys.env`
 
-+ Публичный ключ должен находить в tauri.conf.json\tauri\updater\pubkey
++ Публичный ключ должен находить в `tauri.conf.json\tauri\updater\pubkey`
 + Приватный ключ (с паролём или без) должен лижать в переменных средах вашего компьютера
 Подробнее об этой [проблеме](https://github.com/tauri-apps/tauri/discussions/4451). А как правильно добавить ключ в 
 [переменные среды](https://phoenixnap.com/kb/windows-set-environment-variable). После этого потребуется перезапуск 
 компьютера.
   
-Также его нужно будет заменить в файле main.yml
+Также его нужно будет заменить в файле `main.yml`
   
 
 Полная инструкция [здесь](https://tauri.app/v1/guides/distribution/updater/)
@@ -52,3 +44,8 @@ npm run tauri dev
 ```
 npm run tauri build
 ```
+
+4 - Изменить во всех файлах, где написано `tauri-base` на имя вашего приложения
+
+5 - Поменять Url в `tauri.conf.json\tauri\updater\endpoints` для обновления проекта 
+(где будут лежать новые обновления для вашего приложения)

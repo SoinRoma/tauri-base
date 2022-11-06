@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "Lexivo",
+    "productName": "Tauri-Base",
     "version": "../package.json"
   },
   "build": {
@@ -24,7 +24,7 @@
         "icons/Favicon.png",
         "icons/Favicon.ico"
       ],
-      "identifier": "lexivo.net",
+      "identifier": "tauri-base.net",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -56,7 +56,7 @@
     },
     "windows": [
       {
-        "title": "Lexivo",
+        "title": "tauri-base",
         "center": true,
         "width": 1300,
         "minWidth": 1300,

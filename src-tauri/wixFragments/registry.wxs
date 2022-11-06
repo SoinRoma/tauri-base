@@ -6,8 +6,8 @@
       <!-- groups together the registry entries to be installed -->
       <!-- Note the unique `Id` we provide here -->
       <Component Id="ApplicationURI" Guid="*">
-                <RegistryKey Root="HKCR" Key="lexivo">
-                    <RegistryValue Type="string" Value="lexivo" />
+                <RegistryKey Root="HKCR" Key="tauri-base">
+                    <RegistryValue Type="string" Value="tauri-base" />
                     <RegistryValue Name="URL Protocol" Type="string" Value=""/>
                     <RegistryKey Key="shell">
                         <RegistryKey Key="open">
